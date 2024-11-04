@@ -1,0 +1,153 @@
+/* Font declaration for later use */
+@font-face {
+    font-family: 'CaskaydiaCove Nerd Font Regular';
+    src: url('CaskaydiaCoveNerdFont-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'CaskaydiaCove Nerd Font Bold';
+    src: url('CaskaydiaCoveNerdFont-Bold.ttf') format('truetype');
+}
+
+/* Base Styles */
+html,
+body {
+    margin: 1rem 0 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'CaskaydiaCove Nerd Font Regular', monospace;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Section and Headings */
+section, h1, h2, h3, h4, h5, h6 {
+    padding: 1rem;
+}
+
+.php-code {
+    padding: 0;
+}
+
+/* Navigation Styles */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    background-color: #000;
+    color: #FFF;
+    z-index: 1000;
+    align-items: center;
+    padding: 0;
+}
+
+nav .logo img {
+    width: 3rem;
+}
+
+nav .logo-text {
+    font-size: 1rem;
+    font-family: 'CaskaydiaCove Nerd Font Bold', monospace;
+    padding: 1rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex: 1;
+}
+
+nav li {
+    position: relative;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+}
+
+nav li a {
+    height: 1rem;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav li a:hover {
+    background-color: #404040;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    background-color: #ccc;
+    z-index: 1000;
+}
+
+nav li:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown li a {
+    padding: 0.5rem 1rem;
+}
+
+.dropdown li a:hover {
+    background-color: #bbb;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000;
+    color: #FFF;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-aspect-ratio: 1/1.5), screen and (max-width: 300px) {
+    nav {
+        position: fixed;
+        align-items: center;
+    }
+
+    body {
+        padding-top: 6rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    .dropdown {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    footer {
+        font-size: clamp(1rem, 1.125rem, 3vw);
+    }
+}
