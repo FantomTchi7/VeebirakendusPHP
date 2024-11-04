@@ -55,4 +55,6 @@ echo $tekst = 'Näitus tekst, lorem ipsum ad mortem inimicus';
 echo '<br>';
 echo "Esimene täht - ".$tekst[0];
 echo '<br>';
-echo "Neljas täht - ".$tekst[4];
+echo "Neljas täht - ".$tekst[4]; // ä on kaks tähed
+echo '<br>';
+echo "Kolmas sõna - ".str_word_count($tekst,1)[3];
