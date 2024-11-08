@@ -34,7 +34,7 @@ function showImage() {
         </li>
         <li>
             <a href="?leht=ajafunktsioonid.php">Ajafunktsioonid&nbsp;
-                <img src="<?=showImage()?>" alt="hooaeg" style="height: 1rem; width: 1rem; vertical-align: middle">
+                <img src="<?=showImage()?>" alt="hooaeg" style="height: 1rem; width: 1rem">
             </a>
         </li>
     </ul>

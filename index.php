@@ -27,7 +27,7 @@
 <script>
     function updateBodyPadding() {
         const navHeight = document.querySelector('nav').offsetHeight;
-        document.body.style.paddingTop = `calc(${navHeight}px - 2.25rem)`;
+        document.body.style.paddingTop = `calc(${navHeight}px - 3rem)`;
     }
 
     window.addEventListener('resize', updateBodyPadding);
