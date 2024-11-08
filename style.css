@@ -124,9 +124,50 @@ footer {
     padding: 1rem;
 }
 
-#kuupaev {
+.ajafunktsioonid {
     border: solid 1px black;
     padding: 1rem;
+    border-radius: 1rem;
+}
+
+#ajaImg {
+    height: 1rem;
+    width: 1rem;
+    background-color: black;
+    border-radius: 1rem;
+    vertical-align: center  ;
+}
+
+#koolivaheaeg {
+    color: #7f0000;
+}
+
+#koolivaheaeg h2 {
+    color: #ff0000;
+}
+
+#sunnipaev {
+    color: #007f00;
+}
+
+#sunnipaev h2 {
+    color: #00ff00;
+}
+
+#vanus {
+    color: #00007f;
+}
+
+#vanus h2 {
+    color: #0000ff;
+}
+
+#massiiv {
+    color: #7f4000;
+}
+
+#massiiv h2 {
+    color: #ff7f00;
 }
 
 /* Responsive Styles */

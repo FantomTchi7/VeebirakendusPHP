@@ -31,3 +31,7 @@ if (isset($_POST["riikSisesta"])) {
     <input type="text" name="riikSisesta" placeholder="Sisesta riik">
     <input type="submit" value="Sisesta">
 </form>
+<?php
+echo "<br>";
+echo "<br>";
+highlight_file("moistatus.php");

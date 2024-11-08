@@ -1,5 +1,6 @@
 <h2>Ajafunktsioonid</h2>
-<div id='kuupaev'>
+<fieldset id='kuupaev' class="ajafunktsioonid">
+    <legend><h2>Hooaeg&nbsp;<img id="ajaImg" src="<?=showImage()?>" alt="hooaeg">&nbsp;</h2></legend>
     <?php
     echo "Täna on "."<strong>".date("d.m.Y")."</strong><br>";
     date_default_timezone_set("Europe/Tallinn");
@@ -16,10 +17,9 @@
     echo "<strong>"."i"."</strong>"." - minutid 0-59";
     echo "<br>";
     ?>
-    <img src="<?=showImage()?>" alt="hooaeg" style="height: 4rem; width: 4rem; background-color: black">
-</div>
-<div id="koolivaheaeg">
-    <h2>Mitu päeva on koolivaheajani 23.12.2024</h2>
+</fieldset>
+<fieldset id="koolivaheaeg" class="ajafunktsioonid">
+    <legend><h2>Mitu päeva on koolivaheajani 23.12.2024</h2></legend>
     <?php
     $kdate = date_create_from_format('d.m.Y', '23.12.2024');
     $date = date_create();
@@ -28,18 +28,18 @@
     // echo "<br>";
     echo "Jääb <strong>".$diff->days."</strong> päeva";
     ?>
-</div>
-<div id="sunnipaev">
-    <h2>Mitu päeva on sünnipäevani 25.02.2025</h2>
+</fieldset>
+<fieldset id="sunnipaev" class="ajafunktsioonid">
+    <legend><h2>Mitu päeva on sünnipäevani 25.02.2025</h2></legend>
     <?php
     $kdate = date_create_from_format('d.m.Y', '25.02.2025');
     $date = date_create();
     $diff = date_diff($kdate, $date);
     echo "Jääb <strong>".$diff->days."</strong> päeva";
     ?>
-</div>
-<div id="vanus">
-    <h2>Kasutaja vanuse leidmine</h2>
+</fieldset>
+<fieldset id="vanus" class="ajafunktsioonid">
+    <legend><h2>Kasutaja vanuse leidmine</h2></legend>
     <form method="post" action="">
         Sisesta oma sünnipäev<br>
         <input type="date" name="sunnipaev" placeholder="dd.mm.yyyy">
@@ -60,9 +60,9 @@
         }
     }
     ?>
-</div>
-<div>
-    <h2>Massivi abil näidata kuu nimega.</h2>
+</fieldset>
+<fieldset id="massiiv" class="ajafunktsioonid">
+    <legend><h2>Massivi abil näidata kuu nimega.</h2></legend>
     <form method="post" action="">
         Sisesta kuu<br>
         <select name="kuu">
@@ -96,13 +96,10 @@
         "november",
         "december"
     );
-    if (isset($_POST["kuu"]))
-    {
-        if (empty($_POST["kuu"]))
-        {
+    if (isset($_POST["kuu"])) {
+        if (empty($_POST["kuu"])) {
             echo "Sisesta kuu";
-        } else
-        {
+        } else {
             $kdate = date_create($_POST["kuu"]);
             echo "<strong>";
             echo $kdate->format("m.F.Y");
@@ -110,4 +107,4 @@
         }
     }
     ?>
-</div>
+</fieldset>
