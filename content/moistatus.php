@@ -1,5 +1,6 @@
 <?php
-echo "Mõistatus: Euroopa riik<br>";
+echo "<h1>Mõistatus</h1>";
+echo "Euroopa riik<br>";
 $riik = "Saksamaa";
 $pikkus = strlen($riik);
 $kasutatudI = [];

@@ -1,4 +1,5 @@
 <?php
+echo "<h1>Proov</h1>";
 echo "Tere hommikust!";
 echo "<br>";
 $muutuja = "PHP on skriptikeel.";

@@ -6,15 +6,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-<div>
+<header class="php-code">
     <?php
         include("nav.php");
     ?>
-</div>
 </header>
-<h1>PHP tunnitööd</h1>
-<section>
+<section class="php-code">
     <?php
     if (isset($_GET["leht"])) {
         include("content/".$_GET["leht"]);
@@ -27,4 +24,13 @@
         include("footer.php");
     ?>
 </body>
+<script>
+    function updateBodyPadding() {
+        const navHeight = document.querySelector('nav').offsetHeight;
+        document.body.style.paddingTop = `calc(${navHeight}px - 2.25rem)`;
+    }
+
+    window.addEventListener('resize', updateBodyPadding);
+    window.addEventListener('load', updateBodyPadding);
+</script>
 </html>

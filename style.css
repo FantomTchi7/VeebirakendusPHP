@@ -30,6 +30,10 @@ section, h1, h2, h3, h4, h5, h6 {
     padding: 1rem;
 }
 
+.php-code h1, .php-code h2, .php-code h3, .php-code h4, .php-code h5, .php-code h6 {
+    padding: 0;
+}
+
 /* Navigation Styles */
 nav {
     position: fixed;
@@ -120,15 +124,16 @@ footer {
     padding: 1rem;
 }
 
+#kuupaev {
+    border: solid 1px black;
+    padding: 1rem;
+}
+
 /* Responsive Styles */
 @media screen and (max-aspect-ratio: 1/1.5), screen and (max-width: 300px) {
     nav {
         position: fixed;
         align-items: center;
-    }
-
-    body {
-        padding-top: 6rem;
     }
 
     nav ul {
