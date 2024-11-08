@@ -7,7 +7,7 @@
 </head>
 <body>
 <header>
-<div class="php-code">
+<div>
     <?php
         include("nav.php");
     ?>
@@ -15,23 +15,16 @@
 </header>
 <h1>PHP tunnitööd</h1>
 <section>
-<div class="php-code">
     <?php
     if (isset($_GET["leht"])) {
         include("content/".$_GET["leht"]);
     } else {
-        echo "Tere tulemast!";
+        include("content/kodu.php");
     }
     ?>
-</div>
 </section>
-<footer>
-<div class="php-code">
-<?php
-    echo "Vladislav Kudriašev &copy ";
-    echo date('Y/m/d');
-?>
-</div>
-</footer>
+    <?php
+        include("footer.php");
+    ?>
 </body>
 </html>
