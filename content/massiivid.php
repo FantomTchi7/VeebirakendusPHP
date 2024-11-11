@@ -1,7 +1,9 @@
 <fieldset id="ul1">
     <legend><h2>Ülesanne 1</h2></legend>
-    Lisa massiivi 15 HTML värvi.<br>
-    Kuva tsükliga span ja color abi.
+    <ul>
+    <li>Lisa massiivi 15 HTML värvi.</li>
+    <li>Kuva tsükliga span ja color abi.</li>
+    </ul>
 <?php
 // Massiiv HTML värvidest
 $colorsHTML = Array(
@@ -21,7 +23,6 @@ $colorsHTML = Array(
     "Black",
     "White"
 );
-echo "<br>";
 // Tsükl HTML värvidest
 for ($i = 0; $i < count($colorsHTML); $i++) {
     echo "<span style='color: $colorsHTML[$i]'><br>$colorsHTML[$i]</span>";
@@ -30,14 +31,14 @@ for ($i = 0; $i < count($colorsHTML); $i++) {
 ?>
 </fieldset>
 <fieldset id="ul2">
-    <legend><h2>Ülesanne 2</h2></legend>
-    <a href="https://www.metshein.com/unit/php-massiivid-ulesanne-5/">PHP - massiivid</a>
-    * Kuva kõik autod loeteluga;
-    * leia autode arv (count)<br>
-    * kontrolli, kas massiivid on ühekpikkused<br>
-    * leia eraldi Toyotade ja Audide arv nimekirjas<br>
-    * leia ja väljasta VIN koodid, mille märkide arv on väiksem kui 17<br>
-</fieldset>
+    <legend><h2>Ülesanne 2: <a href="https://www.metshein.com/unit/php-massiivid-ulesanne-5/">PHP - massiivid</a></h2></legend>
+    <ul>
+    <li>Kuva kõik autod loeteluga.</li>
+        <li>Leia autode arv (count).</li>
+        <li>Kontrolli, kas massiivid on ühekpikkused.</li>
+        <li>Leia eraldi Toyotade ja Audide arv nimekirjas.</li>
+        <li>Leia ja väljasta VIN koodid, mille märkide arv on väiksem kui 17.</li>
+    </ul>
 <?php
 // https://www.metshein.com/unit/php-massiivid-ulesanne-5/
 $autod = array("Subaru","BMW","Acura","Mercedes-Benz","Lexus","GMC","Volvo","Toyota","Volkswagen","Volkswagen","GMC","Jeep","Saab","Hyundai","Subaru","Mercedes-Benz",
@@ -61,15 +62,18 @@ $autodVIN = array("1GKS1GKC8FR966658", "1FTEW1C87AK375821", "1G4GF5E30DF760067",
 "5GAER13D19J026924", "1G4HC5EM1BU329204", "3VWML7AJ6CM772736", "3C6TD4HT2CG011211", "JTDZN3EU2FJ023675", "JN8AZ1MU4CW041721", "KNAFX5A82F5991024",
 "1N6AA0CJ1D57470", "WAUEG98E76A780908", "WAUAF78E96A920706", "1GT01XEG8FZ268942", "1FTEW1CW4AF371278", "JN1AZ4EH8DM531691", "WAUEKAFBXAN294295",
 "1N6AA0EDXFN868772", "WBADW3C59DJ422810");
-for ($k = 0; $k < $autod; $k++) {
-    echo $autod[$k];
+echo "<ol>";
+for ($k = 0; $k < Count($autod); $k++) {
+    echo "<li>".$autod[$k]."</li>";
 }
-echo "Autode arv: ".Count($autod)."<br>";
+echo "</ol>";
+echo "Autode arv: ".Count($autod)."<br><br>";
 if (Count($autod) == Count($autodVIN)) {
     echo "Massiivid on ühekpikkused"."<br>";
 } else {
     echo "Massiivid ei ole ühekpikkused"."<br>";
 }
+echo "<br>";
 $toyotaArv = 0;
 $audiArv = 0;
 for ($j = 0; $j < Count($autod); $j++) {
@@ -81,4 +85,29 @@ for ($j = 0; $j < Count($autod); $j++) {
     }
 }
 echo "Toyotade arv: ".$toyotaArv."<br>";
-echo "Audide arv: ".$audiArv;
+echo "Audide arv: ".$audiArv."<br>";
+echo "<h3>VIN koodid, mille märkide arv on väiksem kui 17:</h3>";
+for ($l = 0; $l < count($autodVIN); $l++) {
+    if (strlen($autodVIN[$l]) < 17) {
+        echo $autod[$l]." - ".$autodVIN[$l]."<br>";
+    }
+}
+?>
+</fieldset>
+</fieldset>
+<fieldset id="ul3">
+    <legend><h2>Ülesanne 3</h2></legend>
+    Kuva img kaustast kõik pildid width=100px.
+<?php
+$asukoht = opendir('content/img');
+$pildidArray = array();
+while($rida = readdir($asukoht)){
+    if($rida!='.' && $rida!='..'){
+        array_push($pildidArray,$rida);
+    }
+}
+echo "<br>";
+for ($m = 0; $m < count($pildidArray); $m++) {
+    echo "<img src='content/img/$pildidArray[$m]' width='100px' alt='pilt' style='background-color: black; border-radius: 1rem'><br>";
+}
+?>
