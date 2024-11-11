@@ -124,7 +124,7 @@ footer {
     padding: 1rem;
 }
 
-.ajafunktsioonid {
+fieldset {
     border: solid 1px black;
     padding: 1rem;
     border-radius: 1rem;

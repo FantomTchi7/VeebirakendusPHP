@@ -1,5 +1,6 @@
 <?php
 echo "<h1>Tekstifunktsioonid</h1>";
+echo "<fieldset>";
 echo "Tere hommikust!";
 echo "<br>";
 $muutuja = "PHP on skriptikeel.";
@@ -29,7 +30,9 @@ echo "<br>";
 // Eralda esimene sõna
 $otsing = "Esmaspäev";
 echo substr($tekst, strpos($tekst, $otsing), strlen($otsing) + 1);
-echo "<h2>Kasutame veebis kasutavaid näidised</h2>";
+echo "</fieldset>";
+echo "<fieldset>";
+echo "<legend><h2>Kasutame veebis kasutavaid näidised</h2></legend>";
 
 // Teksti pikkus
 echo $tekst = 'Teksti pikkus näitus';
@@ -59,3 +62,4 @@ echo '<br>';
 echo "Neljas täht - ".$tekst[4]; // ä on kaks tähed
 echo '<br>';
 echo "Kolmas sõna - ".str_word_count($tekst,1)[3];
+echo "</fieldset>";

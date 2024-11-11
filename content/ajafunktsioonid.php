@@ -1,4 +1,4 @@
-<h2>Ajafunktsioonid</h2>
+<h1>Ajafunktsioonid</h1>
 <fieldset id='kuupaev' class="ajafunktsioonid">
     <legend><h2>Hooaeg&nbsp;<img id="ajaImg" src="<?=showImage()?>" alt="hooaeg">&nbsp;</h2></legend>
     <?php

@@ -37,5 +37,11 @@ function showImage() {
                 <img src="<?=showImage()?>" alt="hooaeg" style="height: 1rem; width: 1rem">
             </a>
         </li>
+        <li>
+            <a href="?leht=pildid.php">Pildid</a>
+        </li>
+        <li>
+            <a href="?leht=massiivid.php">Massiivid</a>
+        </li>
     </ul>
 </nav>

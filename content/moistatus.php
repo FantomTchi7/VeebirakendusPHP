@@ -1,6 +1,7 @@
 <?php
 echo "<h1>Mõistatus</h1>";
-echo "Euroopa riik<br>";
+echo "<fieldset>";
+echo "<legend><h2>Euroopa riik</h2></legend>";
 $riik = "Saksamaa";
 $pikkus = strlen($riik);
 $kasutatudI = [];
@@ -31,6 +32,7 @@ if (isset($_POST["riikSisesta"])) {
     <input type="text" name="riikSisesta" placeholder="Sisesta riik">
     <input type="submit" value="Sisesta">
 </form>
+</fieldset>
 <?php
 echo "<br>";
 echo "<br>";
