@@ -43,5 +43,16 @@ function showImage() {
         <li>
             <a href="?leht=massiivid.php">Massiivid</a>
         </li>
+        <li>
+            <a href="">XML</a>
+            <ul class="dropdown">
+                <li>
+                    <a href="?leht=../XML/autodXML.php">XML Autod</a>
+                </li>
+                <li>
+                    <a href="?leht=../XML/opilasedXML.php">XML Opilased</a>
+                </li>
+            </ul>
+        </li>
     </ul>
 </nav>

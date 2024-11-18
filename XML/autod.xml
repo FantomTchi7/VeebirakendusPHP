@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autod>
+    <auto>
+        <mark>Toyota</mark>
+        <numbrimark>123ABC</numbrimark>
+        <omanik>Kask</omanik>
+        <aasta>2018</aasta>
+    </auto>
+    <auto>
+        <mark>Mazda</mark>
+        <numbrimark>678SGJ</numbrimark>
+        <omanik>Kask</omanik>
+        <aasta>1987</aasta>
+    </auto>
+    <auto>
+        <mark>Nissan</mark>
+        <numbrimark>324CXB</numbrimark>
+        <omanik>Kask</omanik>
+        <aasta>2006</aasta>
+    </auto>
+    <auto>
+        <mark>Lada</mark>
+        <numbrimark>535VCO</numbrimark>
+        <omanik>Vaher</omanik>
+        <aasta>1979</aasta>
+    </auto>
+</autod>

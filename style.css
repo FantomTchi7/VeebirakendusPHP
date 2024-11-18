@@ -107,6 +107,7 @@ nav li:hover .dropdown {
 
 .dropdown li a {
     padding: 0.5rem 1rem;
+    background-color: #000000;
 }
 
 .dropdown li a:hover {
@@ -128,6 +129,10 @@ fieldset {
     border: solid 1px black;
     padding: 1rem;
     border-radius: 1rem;
+}
+
+fieldset fieldset {
+    border-radius: 0.5rem;
 }
 
 #ajaImg {
